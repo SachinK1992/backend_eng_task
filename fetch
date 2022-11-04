@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative 'process_methods'
+
+begin
+  parse_arguments!(ARGV)
+  process!
+rescue StandardError => e
+  puts "\n#####  Error  ######\n\n"
+  puts e.message
+  puts "\n\n"
+end
